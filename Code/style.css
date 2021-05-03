@@ -1,0 +1,353 @@
+/* Fixes */
+body {
+	user-select: none;
+}
+a:focus, input:focus {
+	outline: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.select {
+	user-select: text;
+}
+
+
+
+/* Custom Bootstrap */
+.container {
+	padding-right: 25px;
+	padding-left: 25px;
+	margin-right: auto;
+	margin-left: auto;
+}
+section .container {
+	padding-bottom: 25px;
+}
+.box {
+	background-color: #FFF;
+	padding: 25px;
+	margin-top: 25px;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	width: calc(100% - 50px);
+}
+.box, header {
+	box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.1);
+}
+.split {
+	display: flex;
+	justify-content: space-between;
+}
+.fixedContainer {
+	width: 850px;
+}
+@media (min-width: 900px) {
+	.container {
+		max-width: 850px;
+	}
+	.box.half {
+		width: calc(50% - 62.5px);
+		float: left;
+	}
+	.box.half.second {
+		margin-left: 25px;
+	}
+}
+
+
+
+/* General */
+.hidden, .ninja {
+	opacity: 0;
+}
+.right {
+	float: right;
+}
+.inlineBlock {
+	display: inline-block;
+}
+.centerSelf {
+	margin-left: auto;
+	marign-right: auto;
+}
+
+body {
+	background-color: #FCFCFC;
+	color: #515151;
+	font-family: "Raleway", sans-serif;
+}
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+a > * {
+    color: #515151;
+}
+a, a > *, input, #saved {
+	transition: all 250ms;
+}
+section a:hover, #banner a:hover {
+	color: #00A384;
+}
+.userIsUsingTab section a:focus, .userIsUsingTab #banner a:focus {
+	background-color: rgba(0, 199, 172, 0.25);
+}
+
+section a, header .selected, #saved, #banner a {
+	color: #00C7AC;
+}
+#saved {
+	margin-top: 25px;
+	opacity: 0;
+}
+#saved img {
+	margin-left: 25px;
+	margin-right: 20px;
+}
+h1, h2, h3 {
+	font-weight: normal;
+}
+h1, header h3, img {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+h1 {
+	font-size: 3em;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	margin-left: 20px;
+}
+h2 {
+	font-size: 2em;
+}
+h2:not(:first-child) {
+	margin-top: 2em;
+}
+h3, p {
+	font-size: 1.5em;
+}
+header h3 {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+section p, section h3, section label {
+	margin-top: 15px;
+}
+input {
+	font-family: "Raleway", sans-serif;
+	cursor: pointer;
+}
+label {
+	display: block;
+	font-size: 1.5em;
+	line-height: 1.1em;
+}
+label input {
+	vertical-align: bottom;
+}
+input, label {
+	cursor: pointer;
+}
+input[type="checkbox"] {
+	padding: 8px;
+	background-color: #FFF;
+	border: 1.5px solid #D6D6D6;
+	border-radius: 3px;
+	-webkit-appearance: none;
+	background-size: cover;
+}
+input[type="checkbox"]:hover, input[type="checkbox"]:checked {
+	border-color: #00C7AC;
+}
+input[type="checkbox"]:checked {
+	background-color: #00C7AC;
+	background-image: url(checkWhite.svg);
+}
+.userIsUsingTab input[type="checkbox"]:focus::before {
+	content: "";
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.04);
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+	margin-left: -16px;
+	margin-top: -16px;
+}
+.box>input[type=checkbox] {
+	display: inline-block;
+	float: right;
+}
+
+input[type=button]:not(#close) {
+	-webkit-appearance: none;
+	margin: 25px auto 0 auto;
+	display: block;
+	font-size: 1.5em;
+	padding: 5px 25px;
+	color: #00c7ac;
+	background-color: transparent;
+	border: 1.5px solid #00c7ac;
+}
+
+input[type=button]:hover:not(#close) {
+	color: white;
+	background-color: #00C7AC;
+}
+
+input[type=button]:active:not(#close) {
+	color: #00B294;
+	background-color: #00B294;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	background-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	margin-top: -10px;
+	background: #00C7AC;
+	border: 4px solid white;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	cursor: pointer;
+	height: 20px;
+	border-radius: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover, .userIsUsingTab input[type="range"]:focus::-webkit-slider-thumb {
+	border: 4px solid rgba(255, 255, 255, 0.75);
+}
+
+.hue::-webkit-slider-runnable-track {
+	background: linear-gradient(to right, #FF0000, #FFBF00, #80FF00, #00FF40, #00FFFF, #0040FF, #8000FF, #FF00BF, #FF0000);
+}
+
+.sat::-webkit-slider-runnable-track {
+	background: linear-gradient(to right, #7F7F7F, #00C7AC);
+}
+
+.bri::-webkit-slider-runnable-track {
+	background: linear-gradient(to right, #000000, #FFFFFF);
+}
+
+.opa::-webkit-slider-runnable-track {
+	background: linear-gradient(to right, hsla(0, 100%, 100%, 0), #00C7AC);
+}
+
+
+
+/* Header */
+header {
+	line-height: 70px;
+	background-color: #FFF;
+}
+header a:not(:first-child) {
+	margin-left: 50px;
+}
+header a:visited {
+	color: inherit;
+}
+header a:hover > *:not(.selected), .userIsUsingTab header a:focus > *:not(.selected) {
+	color: #00A384;
+}
+.horizontalScrolling {
+	width: 100%;
+	overflow: auto;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+
+
+/* Banner */
+#banner {
+	display: none;
+	background-color: #FFF;
+	width: 100%;
+	box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.1);
+	margin-top: -3px;
+}
+
+#bannerMessage {
+	max-width: calc(100% - 44px);
+	margin: 10px 0;
+}
+@media (min-width: 900px) {
+	#bannerMessage {
+		max-width: 95%;
+	}
+}
+.close {
+	background-size: cover;
+	width: 44px;
+	height: 44px;
+	float: right;
+	background-color: transparent;
+	background-image: url(closeDark.svg);
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+}
+.close:hover, .userIsUsingTab .close:focus {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	h1, h2, h3, h4, h5, h6, p, label, a > * {
+		color: #DDD;
+	}
+
+	header, #banner, .box, input[type="checkbox"] {
+		background-color: #35363A;
+	}
+	body {
+		background-color: #323336;
+	}
+
+	input[type="checkbox"] {
+		border: 1.5px solid #DDD;
+	}
+	input[type="checkbox"]:hover, input[type="checkbox"]:checked {
+		border-color: #00C7AC;
+	}
+	input[type="checkbox"]:checked {
+		background-color: #00C7AC;
+		background-image: url(checkDark.svg);
+	}
+	.userIsUsingTab input[type="checkbox"]:focus::before {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+		border-color: #323336;
+	}
+	input[type="range"]::-webkit-slider-thumb:hover, .userIsUsingTab input[type="range"]:focus::-webkit-slider-thumb {
+		border-color: rgba(50, 51, 54, 0.75);
+	}
+
+	.close {
+		background-image: url(closeWhite.svg);
+	}
+}

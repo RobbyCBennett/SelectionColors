@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Selection Colors - Options</title>
+
+	<link rel="icon" type="image/svg+xml" href="icon.svg">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+	<header class="horizontalScrolling test">
+		<div class="container fixedContainer split">
+			<div>
+				<img src="icon.svg" width="40px" height="40px">
+
+				<h1>Selection Colors</h1>
+			</div>
+			<div>
+				<a>
+					<h3 class="selected">OPTIONS</h3>
+				</a>
+
+				<a href="support.html">
+					<h3>SUPPORT</h3>
+				</a>
+
+				<a href="https://www.codebyrob.com/software" target="_blank">
+					<h3>MORE</h3>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<div id="banner">
+		<div class="container split">
+			<h3 id="bannerMessage">
+				Having trouble? Refresh your tabs. You also might have to disable other extensions that interfere.
+			</h3>
+			<input id="close" name="Close" type="button" id="closeBanner" class="close">
+		</div>
+	</div>
+
+	<section id="options" class="hidden">
+		<div class="container">
+			<div class="box half">
+				<h2 class="inlineBlock">Background Color</h2>
+				<input type="checkbox" id="bg">
+				<label>
+					Hue
+					<span class="right" id="bgHueVal"></span>
+					<input type="range" id="bgHue" class="bg hue" min="0" max="360">
+				</label>
+				<label>
+					Saturation
+					<span class="right" id="bgSatVal"></span>
+					<input type="range" id="bgSat" class="bg sat" min="0" max="100">
+				</label>
+				<label>
+					Brightness
+					<span class="right" id="bgBriVal"></span>
+					<input type="range" id="bgBri" class="bg bri" min="0" max="100">
+				</label>
+				<label>
+					Opacity
+					<span class="right" id="bgOpaVal"></span>
+					<input type="range" id="bgOpa" class="bg opa" min="0" max="100">
+				</label>
+			</div>
+
+			<div class="box half second">
+				<h2 class="inlineBlock">Text Color</h2>
+				<input type="checkbox" id="tx">
+				<label>
+					Hue
+					<span class="right" id="txHueVal"></span>
+					<input type="range" id="txHue" class="tx hue" min="0" max="360">
+				</label>
+				<label>
+					Saturation
+					<span class="right" id="txSatVal"></span>
+					<input type="range" id="txSat" class="tx sat" min="0" max="100">
+				</label>
+				<label>
+					Brightness
+					<span class="right" id="txBriVal"></span>
+					<input type="range" id="txBri" class="tx bri" min="0" max="100">
+				</label>
+				<label>
+					Opacity
+					<span class="right" id="txOpaVal"></span>
+					<input type="range" id="txOpa" class="tx opa" min="0" max="100">
+				</label>
+			</div>
+
+			<div class="box">
+				<h2 class="select">Example Text</h2>
+				<p class="select">
+					Abi et renuntia iam suo iure iucundum supermentales excessus. Non videtur autem in hilaritatem gaudiumque carmina. Contemni coepti separatim de lecto. Her inquietudine animos nostros fugax adhuc colligendis. Ipsum amatum villa adipem senex venit. Graves viduae non fuisti in horas. Nec tamen haec potentia iuvenes invenerunt. Sed nostra par eius malum pereffluamus.
+				</p>
+				<p class="select">
+					Impleantur nec nulla. Egregie se consideratae sunt circumdatur. Dicimus, quod est primum bonum legere. Debere esse iucundius non invitamentum ad me nuntium validum. Utrum homo indiget concludi dashwoods addere accessiones resources. Capit packages procul minimum aut vici, repetitis adflicta. Nefas ancillas et non erit super interrogavit frui. Pauci de domo aliquando adhaerebant. Sicut coire quispiam de eo quattuor sum in occursum princeps.
+				</p>
+			</div>
+
+			<div class="box">
+				<h2>Reset Colors</h2>
+				<p>Go back to the default colors</p>
+				<input type="button" id="resetColors" value="Reset Colors">
+			</div>
+
+			<h3 id="saved">
+				<img src="checkBlue.svg" width="16px" height="16px">
+				Options saved to your Google account
+			</h3>
+		</div>
+	</section>
+
+	<script src="animateSaved.js"></script>
+	<script src="applyColorsPreview.js"></script>
+	<script src="liveFeedback.js"></script>
+	<script src="options.js"></script>
+	<script src="focusStyleForAccessibility.js"></script>
+	<script src="banner.js"></script>
+</body>
+
+</html>
