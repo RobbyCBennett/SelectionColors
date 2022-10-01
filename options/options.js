@@ -7,7 +7,7 @@ function resetColors() {
 		bgBri: 50,
 		bgOpa: 25,
 
-		tx: true,
+		tx: false,
 		txHue: 0,
 		txSat: 0,
 		txBri: 0,

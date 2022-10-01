@@ -1,0 +1,35 @@
+{
+	"manifest_version": 3,
+	"name": "Selection Colors",
+	"short_name": "Selection Colors",
+	"description": "Change the font color and background color of selected text.",
+	"author": "Robby Bennett",
+	"icons": {
+		"16": "/assets/icon16.png",
+		"32": "/assets/icon32.png",
+		"48": "/assets/icon48.png",
+		"128": "/assets/icon128.png"
+	},
+	"version": "3.0",
+	"action": {
+		"default_icon": "/assets/icon128.png",
+		"default_popup": "/options/options.html#popup"
+	},
+	"options_ui": {
+		"page": "/options/options.html",
+		"open_in_tab": true
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"/content.js"
+			]
+		}
+	]
+}
