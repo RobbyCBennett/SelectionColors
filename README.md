@@ -11,7 +11,12 @@ Change the font color and background color of selected text. The standard dark b
 ## Features
 
 Custom Selection Color
-* Pick any color and transparency, refresh the tab, and see the new color.
+* Pick any color and transparency, refresh the tab, and see the new color
+
+Instructions
+1. Open the options for this extension
+2. Pick a color (recommended: default settings & only change the background hue)
+3. Refresh your pages
 
 Options
 * Background color
