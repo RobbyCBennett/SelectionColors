@@ -1,4 +1,4 @@
-# Swift Tab Switcher
+# Selection Colors
 
 ## Install
 
@@ -11,12 +11,11 @@ Change the font color and background color of selected text. The standard dark b
 ## Features
 
 Custom Selection Color
-* Pick any color and transparency, and it works most online websites.
+* Pick any color and transparency, refresh the tab, and see the new color.
 
 Settings
 * Background color
 * Text color
-* Reset colors
 
 Storage Sync
 * Options saved for use on any computer
