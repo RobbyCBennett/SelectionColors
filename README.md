@@ -13,7 +13,7 @@ Change the font color and background color of selected text. The standard dark b
 Custom Selection Color
 * Pick any color and transparency, refresh the tab, and see the new color.
 
-Settings
+Options
 * Background color
 * Text color
 
