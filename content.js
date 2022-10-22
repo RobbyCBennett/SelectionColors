@@ -37,13 +37,18 @@ setDefaults();
 function makeColor(hue, sat, bri, opa) {
 	return `hsla(${hue}, ${sat}%, ${bri}%, ${opa / 100})`;
 }
-async function setColorsFromOptions() {
+async function setStyleAndColorsBeforeLoad() {
 	// Get options
 	const options = await chrome.storage.sync.get();
 
 	// Get colors
 	const bg = options.bg ? makeColor(options.bgHue, options.bgSat, options.bgBri, options.bgOpa) : 'inherit';
 	const tx = options.tx ? makeColor(options.txHue, options.txSat, options.txBri, options.txOpa) : 'inherit';
+
+	// Set colors
+	const rootInlineStyle = document.querySelector(':root').style;
+	rootInlineStyle.setProperty('--selection_colors_bg', bg);
+	rootInlineStyle.setProperty('--selection_colors_tx', tx);
 
 	// Create css rule
 	const rule = `
@@ -58,14 +63,14 @@ async function setColorsFromOptions() {
 		input::-webkit-datetime-edit-second-field:focus,
 		input::-webkit-datetime-edit-week-field:focus,
 		input::-webkit-datetime-edit-year-field:focus {
-			background-color: ${bg} !important;
-			color: ${tx} !important;
+			background-color: var(--selection_colors_bg) !important;
+			color: var(--selection_colors_tx) !important;
 		}
 	`;
 
 	// Append stylesheet to body
-	const style = document.createElement('style');
-	document.head.appendChild(style);
-	style.sheet.insertRule(rule);
+	const newStyleSheet = document.createElement('style');
+	document.head.appendChild(newStyleSheet);
+	newStyleSheet.sheet.insertRule(rule);
 }
-setColorsFromOptions();
+setStyleAndColorsBeforeLoad();

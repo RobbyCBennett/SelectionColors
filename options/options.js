@@ -106,7 +106,7 @@ function saveOption(key, value, autoSaveDelay=0) {
 
 // Colors
 function setColorsFromOptions() {
-	// Hide options
+	// Hide disabled options
 	for (const option of document.getElementsByClassName('bg')) {
 		if (options.bg) {
 			option.classList.remove('hidden');
