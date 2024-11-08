@@ -42,15 +42,17 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root {
+		color-scheme: dark;
+
 		/* Colors */
 		--text: #EEEEEE;
-		--bg:   #292A2D;
+		--bg:   #16161A;
 
 		--colorDim: #00473e;
 
-		--option: #252628;
-		--hover:  rgba(127, 127, 127, 10%);
-		--active: rgba(127, 127, 127, 20%);
+		--option: #0f0f12;
+		--hover:  #1C1C21;
+		--active: #232329;
 	}
 }
 
@@ -166,6 +168,13 @@ header img {
 .defaultCursor {
 	cursor: default;
 }
+p.option {
+	cursor: default;
+}
+p.option:hover, p.option:active {
+	background-color: var(--option);
+}
+
 
 
 
@@ -229,7 +238,10 @@ input[type='range']::-webkit-slider-thumb {
 	border-radius: var(--circle);
 	background-color: var(--color);
 	margin-top: calc(var(--circle) * -0.125);
-	outline: calc(var(--circle) * 0.25) solid var(--option);
+	outline: calc(var(--circle) * 0.25) solid var(--hover);
+}
+input[type='range']:hover::-webkit-slider-thumb {
+	outline-color: var(--option);
 }
 input[type='range']::-webkit-slider-runnable-track {
 	cursor: pointer;
