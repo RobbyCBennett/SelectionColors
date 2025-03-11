@@ -6,7 +6,7 @@ async function setDefaults() {
 		bgHue: 165,
 		bgSat: 100,
 		bgBri: 50,
-		bgOpa: 50,
+		bgOpa: 25,
 
 		tx: false,
 		txHue: 0,
@@ -38,6 +38,10 @@ function makeColor(hue, sat, bri, opa) {
 	return `hsla(${hue}, ${sat}%, ${bri}%, ${opa / 100})`;
 }
 async function setStyleAndColorsBeforeLoad() {
+	// Skip SVG
+	if (document.documentElement.tagName === 'svg')
+		return;
+
 	// Get options
 	const options = await chrome.storage.sync.get();
 
